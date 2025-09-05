@@ -25,4 +25,15 @@ export class AppComponent {
     }
   }
 
+  removeFav(person: string): void {
+    this.favorites = this.favorites.filter((p) => p !== person);
+  }
+
+  isInFav(person: string): boolean {
+    if (this.favorites.indexOf(person) === -1) {
+      return false;
+    }
+    return true;
+  }
+ 
 }

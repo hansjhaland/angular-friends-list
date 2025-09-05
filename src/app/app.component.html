@@ -22,7 +22,9 @@
    @for (person of people; track person) {
     <app-people
       [name] = "person"
+      [isFav] = "isInFav(person)"
       (addFav) = "addFav($event)"
+      (removeFav) = "removeFav($event)"
     ></app-people>
    }
 </div>
