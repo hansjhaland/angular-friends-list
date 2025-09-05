@@ -11,7 +11,7 @@ export class PeopleComponent {
   @Input() isFav: boolean = false;
   @Output() addFav: EventEmitter<string> = new EventEmitter<string>();
 
-  setAsFav(person: string): void {
+  addToFav(person: string): void {
     this.addFav.emit(person);
   }
 
